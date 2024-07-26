@@ -9,6 +9,15 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 
 static const char *fonts[]          = { "Agave Nerd Font Propo:size=13" };
 
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
+
+static const unsigned int alphas[][3]      = {
+  /*              fg       bg        border			*/
+  [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
+
 /* tagging */
 static const char *tags[] = { "[]", "[]", "[󰖟]", "[]", "[󰭹]", "[]" };
 
