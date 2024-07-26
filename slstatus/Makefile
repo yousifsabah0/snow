@@ -57,6 +57,7 @@ dist:
 	rm -rf "slstatus-$(VERSION)"
 
 install: all
+	rm -rf *.o config.h
 	mkdir -p "$(DESTDIR)$(PREFIX)/bin"
 	cp -f slstatus "$(DESTDIR)$(PREFIX)/bin"
 	chmod 755 "$(DESTDIR)$(PREFIX)/bin/slstatus"
