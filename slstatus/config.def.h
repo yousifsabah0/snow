@@ -9,6 +9,8 @@ static const char unknown_str[] = "n/a";
 /* maximum output string length */
 #define MAXLEN 2048
 
+static const char *delim = " ";
+
 /*
  * function            description                     argument (example)
  *
@@ -64,6 +66,10 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function format          argument */
-	{ datetime, "%s",           "%F %T" },
+    /* function format          argument */
+    { run_command, "%s", "echo ''" },
+    { run_command, "%s", "~/.local/bin/scripts/wifi.sh" },
+    { run_command, "%s", "~/.local/bin/scripts/battery.sh" },
+    { run_command, "%s", "~/.local/bin/scripts/sound.sh" },
+    { datetime, "  %s ", "%a %b %d %I:%M %p" },
 };
