@@ -35,6 +35,7 @@ dist: clean
 	rm -rf dmenu-$(VERSION)
 
 install: all
+	rm -rf *.o config.h
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	cp -f dmenu dmenu_path dmenu_run stest $(DESTDIR)$(PREFIX)/bin
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu
