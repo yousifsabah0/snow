@@ -35,6 +35,7 @@ dist: clean
 	rm -rf st-$(VERSION)
 
 install: st
+	rm -rf *.o config.h
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	cp -f st $(DESTDIR)$(PREFIX)/bin
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/st
