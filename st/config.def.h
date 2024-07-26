@@ -18,6 +18,7 @@ static int borderpx = 24;
  */
 static char *shell = "/bin/sh";
 char *utmp = NULL;
+
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
@@ -75,6 +76,9 @@ static int bellvolume = 0;
 
 /* default TERM value */
 char *termname = "st-256color";
+
+/* bg opacity */
+float alpha = 0.8;
 
 /*
  * spaces per tab
